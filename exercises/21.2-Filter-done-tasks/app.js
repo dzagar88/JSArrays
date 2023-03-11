@@ -7,6 +7,10 @@ let tasks = [
 	{ label: 'Ask for a raise', done: false },
 	{ label: 'Read a book', done: true },
 	{ label: 'Make a trip', done: false }
-];
-
-//your code here
+  ];
+  
+  let filteredTasks = tasks.filter(function(task) {
+	return !task.done;
+  });
+  
+  console.log(filteredTasks);

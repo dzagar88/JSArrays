@@ -6,28 +6,25 @@ let allColors = [
 	{label: 'Pink', sexy: true},
 	{label: 'Violet', sexy: true},
 	{label: 'Purple', sexy: false},
-];
-
-function generateLI(color){
-	// your code here
-}
-
-function filterColors(color){
-	// your code here
-}
-
-function generateHTMLFromArray(array){
-	
+  ];
+  
+  function generateLI(color){
+	return `<li>${color.label}</li>`;
+  }
+  
+  function filterColors(color){
+	return color.sexy;
+  }
+  
+  function generateHTMLFromArray(array){
 	let filteredOptions = array.filter(filterColors);
 	let LIs = filteredOptions.map(generateLI);
-
 	let htmlString = '<ul>';
 	LIs.forEach(function(elm){
-		htmlString += elm;
+	  htmlString += elm;
 	})
 	htmlString += '</ul>';
 	return htmlString;
-}
-
-console.log(generateHTMLFromArray(allColors));
-
+  }
+  
+  console.log(generateHTMLFromArray(allColors)); // <ul><li>Red</li><li>Orange</li><li>Pink</li><li>Violet</li></ul>

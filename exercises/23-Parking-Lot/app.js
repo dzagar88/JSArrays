@@ -10,4 +10,5 @@ let parking_state = [
 // Your code here
 
 
+
 console.log(getParkingLotState(parking_state))
